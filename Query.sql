@@ -12,3 +12,10 @@ where T.TeamName = "Los Angeles Lakers" and A.PlayerId = P.PlayerId and T.TeamId
 
 # 3
 # 
+
+
+# 4
+#
+
+#5
+#
