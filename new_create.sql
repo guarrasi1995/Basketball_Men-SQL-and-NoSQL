@@ -357,6 +357,7 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 776
 DEFAULT CHARACTER SET = utf8;
 
+
 ############################################################################################
 ############################################################################################
 ############################################################################################
@@ -380,4 +381,72 @@ IGNORE 1 ROWS;
 
 
 
-select * from coaches;
+LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/awards_coaches.csv' 
+INTO TABLE awards_coaches 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
+
+
+LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/players.csv' 
+INTO TABLE players 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
+
+LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/awards_players.csv' 
+INTO TABLE awards_players 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
+LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/draft.csv' 
+INTO TABLE draft 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
+
+LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/player_allstar.csv' 
+INTO TABLE player_allstar 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
+
+LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/players_teams.csv' 
+INTO TABLE players_teams 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
+
+LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/series_post.csv' 
+INTO TABLE series_post 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
