@@ -132,7 +132,6 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 62
 DEFAULT CHARACTER SET = utf8;
 
-
 -- -----------------------------------------------------
 -- Table players
 -- -----------------------------------------------------
@@ -365,7 +364,7 @@ DEFAULT CHARACTER SET = utf8;
 # INSERT DATA
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/teams.csv' 
 INTO TABLE teams 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -374,7 +373,7 @@ IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/coaches.csv' 
 INTO TABLE coaches 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -383,7 +382,7 @@ IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/awards_coaches.csv' 
 INTO TABLE awards_coaches 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -391,10 +390,9 @@ IGNORE 1 ROWS;
 
 
 
-
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/players.csv' 
 INTO TABLE players 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -404,7 +402,7 @@ IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/awards_players.csv' 
 INTO TABLE awards_players 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -413,7 +411,7 @@ IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/draft.csv' 
 INTO TABLE draft 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -423,7 +421,7 @@ IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/player_allstar.csv' 
 INTO TABLE player_allstar 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -433,7 +431,7 @@ IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/players_teams.csv' 
 INTO TABLE players_teams 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
@@ -443,10 +441,9 @@ IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/series_post.csv' 
 INTO TABLE series_post 
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ';' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
-
 
 
