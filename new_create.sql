@@ -362,6 +362,7 @@ DEFAULT CHARACTER SET = utf8;
 ############################################################################################
 
 # INSERT DATA
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/teams.csv' 
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/teams.csv' 
 INTO TABLE teams 
 FIELDS TERMINATED BY ';' 
@@ -370,7 +371,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/coaches.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/coaches.csv' 
 INTO TABLE coaches 
 FIELDS TERMINATED BY ';' 
@@ -379,7 +380,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/awards_coaches.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/awards_coaches.csv' 
 INTO TABLE awards_coaches 
 FIELDS TERMINATED BY ';' 
@@ -389,7 +390,7 @@ IGNORE 1 ROWS;
 
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/players.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/players.csv' 
 INTO TABLE players 
 FIELDS TERMINATED BY ';' 
@@ -399,7 +400,7 @@ IGNORE 1 ROWS;
 
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/awards_players.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/awards_players.csv' 
 INTO TABLE awards_players 
 FIELDS TERMINATED BY ';' 
@@ -408,7 +409,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/draft.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/draft.csv' 
 INTO TABLE draft 
 FIELDS TERMINATED BY ';' 
@@ -418,7 +419,7 @@ IGNORE 1 ROWS;
 
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/player_allstar.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/player_allstar.csv' 
 INTO TABLE player_allstar 
 FIELDS TERMINATED BY ';' 
@@ -428,7 +429,7 @@ IGNORE 1 ROWS;
 
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/players_teams.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/players_teams.csv' 
 INTO TABLE players_teams 
 FIELDS TERMINATED BY ';' 
@@ -438,7 +439,7 @@ IGNORE 1 ROWS;
 
 
 
-
+#LOAD DATA LOCAL INFILE 'C:/Users/Valerio/Desktop/Data Management for Data Science/DM HW/NBA-master/dataset/series_post.csv'
 LOAD DATA LOCAL INFILE '/Users/andreamarcocchia/Desktop/Data managment/project/dataset/series_post.csv' 
 INTO TABLE series_post 
 FIELDS TERMINATED BY ';' 
