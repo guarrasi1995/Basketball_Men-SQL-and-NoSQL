@@ -38,4 +38,14 @@ order by sum(pt.points)+ 1.7*sum(pt.rebounds) + 2.2*sum(pt.assists) + 6.1*sum(pt
 limit 50;
 
 #5
-#
+#kobe bryant's team mates
+select distinct p1.firstName, p1.lastName
+from players as p1, players_teams as pt1
+where p1.playerID = pt1.playerID and p1.firstName != 'Kobe' and p1.lastName != 'Bryant'
+and pt1.year in (select pt.year
+				from players as p, players_teams as pt
+				where p.firstName = 'Kobe' and p.lastName = 'Bryant' and p.playerID = pt.playerID) 
+and pt1.tmID in (select pt.tmID
+				from players as p, players_teams as pt
+				where p.firstName = 'Kobe' and p.lastName = 'Bryant' and p.playerID = pt.playerID);
+
