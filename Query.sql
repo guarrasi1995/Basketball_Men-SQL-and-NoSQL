@@ -79,3 +79,13 @@ select firstName, lastName, draftYear
 from draft
 where draftOverall=1 and draftYear>1990
 order by draftYear desc;
+
+
+# 8
+# Names and year of the players that were drafted in the first round and, in that same year, partecipated to Conference Finals and/or Finals of the series post season.
+# Results are ordered by year
+
+select distinct firstName,lastName, draftYear
+from draft as d join teams as t on d.tmID = t.tmID and d.draftYear = t.year join series_post as sp on sp.tmIDWinner = t.tmID join series_post as sp2 on sp2.tmIDLoser = t.tmID
+where sp.year = d.draftYear and d.draftRound=1 and (sp.round="CF" or sp.round="F" or sp2.round="CF" or sp2.round = "F")
+order by d.draftYear;
