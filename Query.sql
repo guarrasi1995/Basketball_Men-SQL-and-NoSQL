@@ -48,4 +48,26 @@ and pt1.year in (select pt.year
 and pt1.tmID in (select pt.tmID
 				from players as p, players_teams as pt
 				where p.firstName = 'Kobe' and p.lastName = 'Bryant' and p.playerID = pt.playerID);
+				
+				
+# 6
+# Number of series played by NBA teams in post season (TOP 10)
+
+create view post_season_score (name, number, id) as
+select t.name, count(*) as conta, t.tmID
+from series_post as sp join teams as t on t.tmID = sp.tmIDWinner and sp.year = t.year
+where t.lgID="NBA"
+group by t.name,t.tmID
+union all
+select t.name, count(*) as conta, t.tmID
+from series_post as sp join teams as t on t.tmID = sp.tmIDLoser and sp.year = t.year
+where t.lgID="NBA"
+group by t.name,t.tmID;
+
+
+select name, sum(number) as count
+from post_season_score
+group by name,id
+order by count desc
+limit 10;
 
