@@ -99,4 +99,9 @@ where ap.year = pt.year and ap.award="Most Valuable Player" and t.lgID="NBA"
 group by t.tmID, t.name;
 
 # 10
-# 
+# Average points and games played at the ALL STAR GAMES for each player in 2000's
+
+select p.firstName, p.lastName, round(avg(pa.points),2) as avg_point, count(*)
+from players as p join player_allstar as pa on pa.playerID = p.playerID
+where pa.season_id >= 2000
+group by p.playerID, p.firstName, p.lastName;
