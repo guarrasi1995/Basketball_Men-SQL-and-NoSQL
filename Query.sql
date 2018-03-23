@@ -89,3 +89,14 @@ select distinct firstName,lastName, draftYear
 from draft as d join teams as t on d.tmID = t.tmID and d.draftYear = t.year join series_post as sp on sp.tmIDWinner = t.tmID join series_post as sp2 on sp2.tmIDLoser = t.tmID
 where sp.year = d.draftYear and d.draftRound=1 and (sp.round="CF" or sp.round="F" or sp2.round="CF" or sp2.round = "F")
 order by d.draftYear;
+
+# 9
+# Teams and number of players that won MVP (Most Valuable Player) award playing in that team
+
+select t.name, count(*) as counter
+from teams as t join players_teams as pt on t.tmID = pt.tmID and t.year = pt.year join players as p on p.playerID = pt.playerID join awards_players as ap on ap.playerID = p.playerID
+where ap.year = pt.year and ap.award="Most Valuable Player" and t.lgID="NBA"
+group by t.tmID, t.name;
+
+# 10
+# 
