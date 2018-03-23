@@ -71,3 +71,11 @@ group by name,id
 order by count desc
 limit 10;
 
+
+# 7
+# Name and year of the first absolute picks from 2011 to 1990
+
+select firstName, lastName, draftYear
+from draft
+where draftOverall=1 and draftYear>1990
+order by draftYear desc;
