@@ -1,3 +1,11 @@
+#######################################################################################################################################
+#######################################################################################################################################
+############################################ DATA MANAGMENT HW - 1 ####################################################################
+#################################### VALERIO GUARRASI AND ANDREA MARCOCCHIA ###########################################################
+#######################################################################################################################################
+#######################################################################################################################################
+
+
 # Create schema
 CREATE DATABASE IF NOT EXISTS Basketball;
 USE Basketball;
@@ -69,8 +77,6 @@ create table if not exists teams
   attendance int(11) default NULL,
   bbtmID varchar(255) default NULL,
   primary key (tmID,year)
-  #INDEX `tmID` (`tmID` ASC),
-  #INDEX `tmID_2` (`tmID` ASC, `year` ASC)
 )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -90,13 +96,6 @@ won int(11) default NULL,
 lost int(11) default NULL,
 post_wins int(11) default NULL,
 post_losses int(11) default NULL,
-#INDEX `coachID` (`coachID` ASC),
-#INDEX `year` (`year` ASC, `coachID` ASC),
-#INDEX `year_2` (`year` ASC, `coachID` ASC, `lgID` ASC),
-#INDEX `year_3` (`year` ASC, `tmID` ASC),
-#INDEX `year_4` (`year` ASC, `tmID` ASC),
-#INDEX `tmID` (`tmID` ASC, `year` ASC),
-#INDEX `tmID_2` (`tmID` ASC, `year` ASC),
 foreign key (tmID,year) references teams(tmID,year)
 on delete cascade
 on update cascade,
@@ -117,12 +116,6 @@ coachID varchar(255) default NULL,
 award varchar(255) default NULL,
 lgID varchar(255) default NULL,
 note varchar(255) default NULL,
-#INDEX `coachID` (`coachID` ASC),
-#INDEX `year` (`year` ASC, `coachID` ASC),
-#INDEX `year_2` (`year` ASC, `coachID` ASC),
-#INDEX `year_3` (`year` ASC, `coachID` ASC, `lgID` ASC),
-#INDEX `coachID_2` (`coachID` ASC, `year` ASC),
-#INDEX `coachID_3` (`coachID` ASC, `year` ASC),
 foreign key (`coachID` , `year`)
 references `coaches` (`coachID` , `year`)
 on delete cascade
@@ -180,7 +173,6 @@ lgID varchar(255) default NULL,
 note varchar(255) default NULL,
 pos varchar(255) default NULL,
 primary key (playerID, year, award),
-#INDEX `playerID` (`playerID` ASC),
 foreign key (`playerID`)
 references `players` (`playerID`)
 on delete cascade
@@ -207,7 +199,6 @@ suffixName varchar(255) default NULL,
 playerID varchar(255) default NULL,
 draftFrom varchar(255) default NULL,
 lgID varchar(255) default NULL,
-#INDEX `tmID` (`tmID` ASC, `draftYear` ASC),
 foreign key (`tmID` , `draftYear`)
 references `teams` (`tmID` , `year`)
 on delete cascade
@@ -246,7 +237,6 @@ ft_made int(11) default NULL,
 three_attempted int(11) default NULL,
 three_made int(11) default NULL,
 primary key (playerID, season_id),
-#INDEX `player_id` (`playerID` ASC),
 foreign key (`playerID`)
 references `players` (`playerID`)
 on delete cascade
@@ -304,13 +294,6 @@ PostftMade int(11) default NULL,
 PostthreeAttempted int(11) default NULL,
 PostthreeMade int(11) default NULL,
 note varchar(255) default NULL,
-#INDEX `playerID` (`playerID` ASC),
-#INDEX `year` (`year` ASC, `tmID` ASC),
-#INDEX `tmID` (`tmID` ASC, `year` ASC),
-#INDEX `tmID_2` (`tmID` ASC, `year` ASC),
-#INDEX `tmID_3` (`tmID` ASC, `year` ASC),
-#INDEX `fgAttempted` (`fgAttempted` ASC),
-#INDEX `fgAttempted_2` (`fgAttempted` ASC),
 foreign key (`playerID`)
 references `players` (`playerID`)
 on delete cascade
@@ -341,8 +324,6 @@ tmIDLoser varchar(255) default NULL,
 lgIDLoser varchar(255) default NULL,
 W int(11) default NULL,
 L int(11) default NULL,
-#INDEX `tmIDWinner` USING BTREE (`tmIDWinner` ASC, `year` ASC),
-#INDEX `tmIDLoser` USING BTREE (`tmIDLoser` ASC, `year` ASC),
 foreign key (`tmIDWinner` , `year`)
 references `teams` (`tmID` , `year`)
 on delete cascade
