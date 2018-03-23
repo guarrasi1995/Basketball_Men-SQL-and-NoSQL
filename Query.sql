@@ -34,7 +34,7 @@ select p.firstName, p.lastName, sum(pt.points)+ 1.7*sum(pt.rebounds) + 2.2*sum(p
 from players_teams as pt join players as p
 where pt.playerID = p.playerID
 group by pt.playerID
-order by sum(pt.points)+ 1.7*sum(pt.rebounds) + 2.2*sum(pt.assists) + 6.1*sum(pt.blocks) + 9.1*sum(pt.steals) + 5.4*sum(pt.turnovers) desc
+order by score desc
 limit 50;
 
 #5
