@@ -114,6 +114,6 @@ from players_teams join players on players.playerID = players_teams.playerID
 group by players.playerID,players.firstName,players.lastName
 having avg(points) > all(select avg(points)
 				from players_teams
-                where year>1989 and year<2000
+                where year>1990 and year<2000
                 group by playerID)
 ;
