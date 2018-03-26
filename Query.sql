@@ -105,3 +105,15 @@ select p.firstName, p.lastName, round(avg(pa.points),2) as avg_point, count(*)
 from players as p join player_allstar as pa on pa.playerID = p.playerID
 where pa.season_id >= 2000
 group by p.playerID, p.firstName, p.lastName;
+
+# 11
+# Players that in their career scored more points in average than any player from the 90's
+
+select players.firstName,players.lastName, round(avg(points),0)
+from players_teams join players on players.playerID = players_teams.playerID
+group by players.playerID,players.firstName,players.lastName
+having avg(points) > all(select avg(points)
+				from players_teams
+                where year>1989 and year<2000
+                group by playerID)
+;
